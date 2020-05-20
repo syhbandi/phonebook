@@ -1,0 +1,43 @@
+{{#if kontak}}
+<div class="center">
+  <h4>Ubah Kontak</h4>
+</div>
+<div class="card horizontal">
+  <div class="card-stacked">
+    <form action="/kontak/ubah/{{kontak.id}}?_method=PUT" method="post">
+      <div class="card-content">
+        {{!-- nama depan --}}
+        <div class="input-field">
+          <input id="namaDepan" name="namaDepan" type="text" class="validate" value="{{kontak.namaDepan}}">
+          <label for="namaDepan">Nama Depan</label>
+        </div>
+
+        <div class="input-field">
+          <input id="namaBelakang" name="namaBelakang" type="text" class="validate" value="{{kontak.namaBelakang}}">
+          <label for="namaBelakang">Nama Belakang</label>
+        </div>
+
+        <div class="input-field">
+          <input id="noHp" name="noHp" type="text" class="validate" value="{{kontak.noHp}}">
+          <label for="noHp">No. HP</label>
+        </div>
+
+        <div class="input-field">
+          <input id="email" name="email" type="email" class="validate" value="{{kontak.email}}">
+          <label for="email">Email</label>
+        </div>
+
+        <div class="input-field">
+          <textarea name="alamat" id="alamat" cols="30" rows="10"
+            class="materialize-textarea">{{kontak.alamat}}</textarea>
+          <label for="alamat">Alamat</label>
+        </div>
+      </div>
+      <div class="card-action">
+        <button class="waves-effect waves-light btn" type="submit">Simpan</button>
+      </div>
+    </form>
+  </div>
+</div>
+{{else}}
+{{/if}}

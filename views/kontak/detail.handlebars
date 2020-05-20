@@ -1,0 +1,38 @@
+<h5 class="center">Detail Kontak</h5>
+{{#if kontak}}
+<div class="card">
+  <div class="card-content">
+    <table class="responsive-table">
+      <tr>
+        <td class="text">Nama depan</td>
+        <td>{{kontak.namaDepan}}</td>
+      </tr>
+      <tr>
+        <td class="text">Nama Belakang</td>
+        <td>{{kontak.namaBelakang}}</td>
+      </tr>
+      <tr>
+        <td class="text">No. Hp</td>
+        <td>{{kontak.noHp}}</td>
+      </tr>
+      <tr>
+        <td class="text">Email</td>
+        <td>{{kontak.email}}</td>
+      </tr>
+      <tr>
+        <td class="text">Alamat</td>
+        <td>{{kontak.alamat}}</td>
+      </tr>
+    </table>
+  </div>
+  <div class="card-action">
+    <a href="/kontak/ubah/{{kontak.id}}" class="btn-floating btn-tiny waves-effect waves-light indigo">
+      <i class="material-icons">edit</i>
+    </a>
+    <a href="/kontak/hapus/{{kontak.id}}?_method=DELETE" class="btn-floating btn-tiny waves-effect waves-light red">
+      <i class="material-icons">delete</i>
+    </a>
+  </div>
+</div>
+{{else}}
+{{/if}}
